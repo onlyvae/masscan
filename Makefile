@@ -91,7 +91,8 @@ endif
 
 
 DEFINES = 
-CFLAGS = -g -ggdb $(FLAGS2) $(INCLUDES) $(DEFINES) -Wall -O2
+CFLAGS = $(FLAGS2) $(INCLUDES) $(DEFINES) -Wall -O2 -I../libpcap-1.10.4
+LDFLAGS = -static -lpcap -L../libpcap-1.10.4
 .SUFFIXES: .c .cpp
 
 all: bin/masscan 
